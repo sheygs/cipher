@@ -1,2 +1,4 @@
 text = 'Hello World'
-print(text)
+shift = 3
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+alphabet.find('z')
