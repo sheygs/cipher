@@ -5,5 +5,4 @@ for char in text.lower():
     index = alphabet.find(char)
     print(char, index)
     new_index = index + shift
-
-text[0] = 'h'
+    new_char = alphabet[new_index]
