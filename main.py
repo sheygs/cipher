@@ -1,10 +1,19 @@
-text = 'Hello World'
+text = 'Hello Zaira'
 shift = 3
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-encrypted_text = ''
-for char in text.lower():
-    print(char == ' ')
-    index = alphabet.find(char)
-    new_index = index + shift
-    encrypted_text += alphabet[new_index]
-    print('char:', char, 'encrypted_text:', encrypted_text)
+
+def caesar():
+  alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  count = len(alphabet)
+  encrypted_text = ''
+
+  for char in text.lower():
+      if char == ' ':
+        encrypted_text += char
+      else:
+        index = alphabet.find(char)
+        new_index = (index + shift) % count
+        encrypted_text += alphabet[new_index]
+  return encrypted_text
+
+print('plain text:', text)
+print('encrypted_text:', caesar())
