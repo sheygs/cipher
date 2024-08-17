@@ -1,21 +1,22 @@
 text = 'Hello Zaira'
-shift = 3
+custom_key = 'python'
 
-def caesar():
+def vigenere(message, key):
+  key_index = 0
   alphabet = 'abcdefghijklmnopqrstuvwxyz'
   count = len(alphabet)
   encrypted_text = ''
 
-  for char in text.lower():
+  for char in message.lower():
+      #Append space to the message
       if char == ' ':
         encrypted_text += char
       else:
         index = alphabet.find(char)
-        new_index = (index + shift) % count
+        new_index = (index + key) % count
         encrypted_text += alphabet[new_index]
 
-  print('plain text:', text)
+  print('plain text:', message)
 
   print('encrypted_text:', encrypted_text)
 
-caesar()
