@@ -13,7 +13,9 @@ def caesar():
         index = alphabet.find(char)
         new_index = (index + shift) % count
         encrypted_text += alphabet[new_index]
-  return encrypted_text
 
-print('plain text:', text)
-print('encrypted_text:', caesar())
+  print('plain text:', text)
+
+  print('encrypted_text:', encrypted_text)
+
+caesar()
